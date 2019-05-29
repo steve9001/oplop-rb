@@ -9,8 +9,8 @@ convert digest to integer with network endianness
 
 allowed symbols:
 from https://www.owasp.org/index.php/Password_special_characters
-excluding the space character
-"!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+excluding space, backslash, doublequote, singlequote, backtick
+"!#$%&()*+,-./:;<=>?@[]^_{|}~"
 DOC
 
 require 'base64'
@@ -19,8 +19,8 @@ require 'openssl'
 module Oplop
   UPPER = ('A'..'Z').to_a
   LOWER = ('a'..'z').to_a
-  DIGIT = (0..9).to_a
-  SYMBOL = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("")
+  DIGIT = ('0'..'9').to_a
+  SYMBOL = "!#$%&()*+,-./:;<=>?@[]^_{|}~".split("")
   class Random
     def initialize(seed)
       @seed = seed % 2147483647
@@ -51,12 +51,22 @@ module Oplop
     def random
       @random ||= \
         begin
-          seed = digest.unpack("N") # network endian
+          seed = digest.unpack("N").first # network endian
           Random.new(seed)
       end
     end
 
     def password
+      positions = []
+      while positions.length < 4 do
+        p = random.next % 16
+        positions << p unless positions.include? p
+      end
+      digest[positions[0]] = UPPER[random.next % 26]
+      digest[positions[1]] = LOWER[random.next % 26]
+      digest[positions[2]] = DIGIT[random.next % 10]
+      digest[positions[3]] = SYMBOL[random.next % SYMBOL.length]
+      digest
     end
   end
 end

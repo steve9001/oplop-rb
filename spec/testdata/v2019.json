@@ -4,7 +4,7 @@
         "label": "a",
         "master": "a",
         "digest": "GHlBXa4ZqnE05XCn",
-        "password": "QSS8CpM1"
+        "password": "7-yBXa4ZqnE05MCn"
     },
     {
         "why": "digest has a digit in first 8 characters & label differs from master password",

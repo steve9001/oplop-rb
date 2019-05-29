@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency  'highline', '~> 1.6'
 
+  s.add_development_dependency 'pry', '~> 0.12.2'
   s.add_development_dependency 'rake', '~> 10.1'
   s.add_development_dependency 'rspec', '~> 2.14'
   s.add_development_dependency 'yajl-ruby', '~> 1.2'
