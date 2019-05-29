@@ -1,3 +1,5 @@
+require 'openssl'
+
 module Oplop
   class Random
     def initialize(seed)
@@ -17,13 +19,12 @@ module Oplop
     end
 
     def digest
-      # TODO: implement digest
-      @digest ||= @label
+      @digest ||= OpenSSL::KDF.pbkdf2_hmac(@master, salt: @label, iterations: 10, length: 20, hash: 'SHA256') 
     end
 
     def random
       # TODO: convert raw hash to integer (bytes)
-      @random ||= Random.new(raw_hash)
+      @random ||= Random.new(digest)
     end
   end
 end
