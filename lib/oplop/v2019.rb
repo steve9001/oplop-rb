@@ -7,12 +7,20 @@ use first 16 characters for base digest
 
 convert digest to integer with network endianness
 
+allowed symbols:
+from https://www.owasp.org/index.php/Password_special_characters
+excluding the space character
+"!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 DOC
 
 require 'base64'
 require 'openssl'
 
 module Oplop
+  UPPER = ('A'..'Z').to_a
+  LOWER = ('a'..'z').to_a
+  DIGIT = (0..9).to_a
+  SYMBOL = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split("")
   class Random
     def initialize(seed)
       @seed = seed % 2147483647
@@ -41,7 +49,6 @@ module Oplop
     end
 
     def random
-      # TODO: convert raw hash to integer (bytes)
       @random ||= \
         begin
           seed = digest.unpack("N") # network endian
