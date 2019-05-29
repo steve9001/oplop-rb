@@ -16,9 +16,9 @@ module Oplop
       @master = master
     end
 
-    def raw_hash
-      # TODO: implement hash
-      @raw_hash ||= @label
+    def digest
+      # TODO: implement digest
+      @digest ||= @label
     end
 
     def random

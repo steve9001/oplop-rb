@@ -1,0 +1,51 @@
+[
+    {
+        "why": "label and master password are easy to type (i.e., short and the same)",
+        "label": "a",
+        "master": "a",
+        "digest": "QSS8CpM1wn8IbyS6IHpJEg==",
+        "password": "QSS8CpM1"
+    },
+    {
+        "why": "digest has a digit in first 8 characters & label differs from master password",
+        "label": "0",
+        "master": "1",
+        "digest": "09lEaAKkQll1XTjm0WPoIA==",
+        "password": "09lEaAKk"
+    },
+    {
+        "why": "digest has a sequence of digits outside of first 8 chars",
+        "label": "0",
+        "master": "9",
+        "digest": "hhOYXsSeuPdXrmQ56Hm7Kg==",
+        "password": "56hhOYXs"
+    },
+    {
+        "why": "digest has a lone digit outside of first 8 chars",
+        "label": "0",
+        "master": "7",
+        "digest": "fLvECeyZDxnHjHW9HgbyFQ==",
+        "password": "9fLvECey"
+    },
+    {
+        "why": "digest has no digits",
+        "label": "0",
+        "master": "0",
+        "digest": "tLFHvFIoKHMfGgFr-nLAcw==",
+        "password": "1tLFHvFI"
+    },
+    {
+        "why": "master password w/ UTF-8 char",
+        "label": "ü",
+        "master": "0",
+        "digest": "fHFfKQlvumngcWEWq7HCgg==",
+        "password": "7fHFfKQl"
+    },
+    {
+        "why": "mixed case, length greater than 1 for label and master",
+        "label": "Aa",
+        "master": "Bb",
+        "digest": "pb3iGMs2S-VgWAX1kElklg==",
+        "password": "pb3iGMs2"
+    }
+]
