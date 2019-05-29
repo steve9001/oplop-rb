@@ -10,42 +10,42 @@
         "why": "digest has a digit in first 8 characters & label differs from master password",
         "label": "0",
         "master": "1",
-        "digest": "09lEaAKkQll1XTjm0WPoIA==",
-        "password": "09lEaAKk"
+        "digest": "HlzldJ2-V_E3h1ut",
+        "password": "H2zldJ2-_LE3h1ub"
     },
     {
         "why": "digest has a sequence of digits outside of first 8 chars",
         "label": "0",
         "master": "9",
-        "digest": "hhOYXsSeuPdXrmQ56Hm7Kg==",
-        "password": "56hhOYXs"
+        "digest": "HosIocsUgtYOCYWk",
+        "password": "Hy<IocMUgtYOCYW5"
     },
     {
         "why": "digest has a lone digit outside of first 8 chars",
         "label": "0",
         "master": "7",
-        "digest": "fLvECeyZDxnHjHW9HgbyFQ==",
-        "password": "9fLvECey"
+        "digest": "Yo5y90ZeAtwQGRCe",
+        "password": "Yo5yu0&eAtwQGRO8"
     },
     {
         "why": "digest has no digits",
         "label": "0",
         "master": "0",
-        "digest": "tLFHvFIoKHMfGgFr-nLAcw==",
-        "password": "1tLFHvFI"
+        "digest": "ayuuriRL_70sozf2",
+        "password": "aOuurisL_709oz]2"
     },
     {
         "why": "master password w/ UTF-8 char",
         "label": "ü",
         "master": "0",
-        "digest": "fHFfKQlvumngcWEWq7HCgg==",
-        "password": "7fHFfKQl"
+        "digest": "hT5lUhEJc3GPf3RT",
+        "password": "hT5l8hCJc3,PfqRT"
     },
     {
         "why": "mixed case, length greater than 1 for label and master",
         "label": "Aa",
         "master": "Bb",
-        "digest": "pb3iGMs2S-VgWAX1kElklg==",
-        "password": "pb3iGMs2"
+        "digest": "No6OcZigJ6ZGahYu",
+        "password": "No6NcvigJ?ZG5hYu"
     }
 ]
