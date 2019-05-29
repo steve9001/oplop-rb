@@ -1,3 +1,9 @@
+<<-DOC
+PBKDF2 password: master, salt: label, iterations: 10, length: 20, hash: sha256
+URL safe base64 without padding, RFC 4648
+DOC
+
+require 'base64'
 require 'openssl'
 
 module Oplop
@@ -19,7 +25,7 @@ module Oplop
     end
 
     def digest
-      @digest ||= OpenSSL::KDF.pbkdf2_hmac(@master, salt: @label, iterations: 10, length: 20, hash: 'SHA256') 
+      @digest ||= Base64.urlsafe_encode64(OpenSSL::KDF.pbkdf2_hmac(@master, salt: @label, iterations: 10, length: 20, hash: 'SHA256'), padding: false)
     end
 
     def random
