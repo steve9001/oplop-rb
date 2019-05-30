@@ -1,51 +1,20 @@
 [
     {
-        "why": "label and master password are easy to type (i.e., short and the same)",
         "label": "a",
         "master": "a",
-        "digest": "GHlBXa4ZqnE05XCn",
-        "password": "7-yBXa4ZqnE05MCn"
+        "digest": "td2ClJYgcX9ZD9U_",
+        "password": "td2_lJYAp69ZD9U_"
     },
     {
-        "why": "digest has a digit in first 8 characters & label differs from master password",
-        "label": "0",
-        "master": "1",
-        "digest": "HlzldJ2-V_E3h1ut",
-        "password": "H2zldJ2-_LE3h1ub"
+        "label": "00",
+        "master": "123456789",
+        "digest": "SFmbMNXQnjLGtCN8",
+        "password": "2FmbCdXQn<LGtCN8"
     },
     {
-        "why": "digest has a sequence of digits outside of first 8 chars",
-        "label": "0",
-        "master": "9",
-        "digest": "HosIocsUgtYOCYWk",
-        "password": "Hy<IocMUgtYOCYW5"
-    },
-    {
-        "why": "digest has a lone digit outside of first 8 chars",
-        "label": "0",
-        "master": "7",
-        "digest": "Yo5y90ZeAtwQGRCe",
-        "password": "Yo5yu0&eAtwQGRO8"
-    },
-    {
-        "why": "digest has no digits",
-        "label": "0",
-        "master": "0",
-        "digest": "ayuuriRL_70sozf2",
-        "password": "aOuurisL_709oz]2"
-    },
-    {
-        "why": "master password w/ UTF-8 char",
-        "label": "ü",
-        "master": "0",
-        "digest": "hT5lUhEJc3GPf3RT",
-        "password": "hT5l8hCJc3,PfqRT"
-    },
-    {
-        "why": "mixed case, length greater than 1 for label and master",
-        "label": "Aa",
-        "master": "Bb",
-        "digest": "No6OcZigJ6ZGahYu",
-        "password": "No6NcvigJ?ZG5hYu"
+        "label": "ΑΒΓΔ",
+        "master": "αβγδ",
+        "digest": "mfwjXPBp49E5FGhu",
+        "password": "mfYj3PBi49.5FGhu"
     }
 ]

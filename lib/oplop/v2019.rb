@@ -22,7 +22,7 @@ module Oplop
 
   LENGTH = 16
 
-  KDF_ITERATIONS = 10
+  KDF_ITERATIONS = 1_000_000
   KDF_HASH = 'SHA256'
 
   UPPER = ('A'..'Z').to_a
