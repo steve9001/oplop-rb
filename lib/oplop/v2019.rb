@@ -23,7 +23,6 @@ module Oplop
   LENGTH = 16
 
   KDF_ITERATIONS = 10
-  KDF_LENGTH = 20
   KDF_HASH = 'SHA256'
 
   UPPER = ('A'..'Z').to_a
@@ -51,7 +50,7 @@ module Oplop
     def digest
       @digest ||= \
         begin
-          key = OpenSSL::KDF.pbkdf2_hmac(@master, salt: @label, iterations: KDF_ITERATIONS, length: KDF_LENGTH, hash: KDF_HASH)
+          key = OpenSSL::KDF.pbkdf2_hmac(@master, salt: @label, iterations: KDF_ITERATIONS, length: LENGTH, hash: KDF_HASH)
           encoded = Base64.urlsafe_encode64(key, padding: false)
           encoded[0..LENGTH - 1]
       end
